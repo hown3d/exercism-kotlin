@@ -1,0 +1,29 @@
+{
+	"name": "Kotlin",
+	"dockerFile": "Dockerfile",
+	
+	// Use 'settings' to set *default* container specific settings.json values on container create. 
+	// You can edit these settings after create using File > Preferences > Settings > Remote.
+	"settings":{
+		"java.jdt.ls.java.home": "/opt/java/openjdk",
+		"java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m",
+		"gradle.nestedProjects": true
+	},
+
+	// Uncomment the next line if you want to publish any ports.
+	// "appPort": [],
+
+	// Uncomment the next line to run commands after the container is created.
+	// "postCreateCommand":[
+	// 		"java -version",
+	//	"echo source ${SDKMAN_DIR}/bin/sdkman-init.sh >> /home/vscode/.profile"
+	// ],
+
+	"extensions": [
+		"vscjava.vscode-java-pack",
+		"fwcd.kotlin",
+		"vscjava.vscode-gradle",
+		"naco-siren.gradle-language",
+		"gabrielbb.vscode-lombok"
+	]
+}
